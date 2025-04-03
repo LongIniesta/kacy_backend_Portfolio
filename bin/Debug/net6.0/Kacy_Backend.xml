@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kacy_Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Kacy_Backend.Controllers.AdminController.ChangePassword(Services.DTO.Request.ChangePasswordRequest)">
+            <summary>
+            Change admin's password
+            </summary>
+            <param name="request">The password information</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AdminController.ResetPass(System.String)">
+            <summary>
+            Reset admin's password
+            </summary>
+            <param name="email">The admin's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AdminController.ChangeMail(Services.DTO.Request.ChangeMailRequest)">
+            <summary>
+            Change admin's email
+            </summary>
+            <param name="request">The admin's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AnalysisController.GetAnalysis(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Get analysis
+            </summary>
+            <param name="request">The filter</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AttendanceController.CheckAttendance(System.Collections.Generic.List{Services.DTO.Request.CheckAttendanceRequest})">
+            <summary>
+            Check attendances
+            </summary>
+            <param name="request">The attendance's infomation </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AttendanceController.GetAttendance(Services.DTO.Request.PagingRequest,Services.DTO.Request.AttendanceRequest)">
+            <summary>
+            Get attendances
+            </summary>
+            <param name="request">The filter</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AttendanceController.GetAttendance(System.DateTime,System.Int32,Services.DTO.Request.PagingRequest)">
+            <summary>
+            Get attendances by admin
+            </summary>
+            <param name="request">The filter</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AttendanceController.GetAttendanceTotal(System.Int32)">
+            <summary>
+            Get attendances
+            </summary>
+            <param name="request">The filter</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.CreateAdmin">
+            <summary>
+            Create admin account
+            </summary>
+            <param name="reuqest">Authentication  for customer</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.LoginAdmin(Services.DTO.Request.LoginAdminRequest)">
+            <summary>
+            Admin Login
+            </summary>
+            <param name="reuqest">Authentication  for admin</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.LoginCustomer(Services.DTO.Request.LoginCustomerRequest)">
+            <summary>
+            Customer Login
+            </summary>
+            <param name="reuqest">Authentication  for customer</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.LoginStaff(Services.DTO.Request.LoginStaffRequest)">
+            <summary>
+            Staff Login
+            </summary>
+            <param name="reuqest">Authentication  for staff</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.LoginGoogle(Services.DTO.Request.LoginGoogleRequest)">
+            <summary>
+            Google Login
+            </summary>
+            <param name="reuqest">Authentication  for google</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.VerifyAndGenerateTokenAdmin(Services.DTO.Request.TokenRequest)">
+            <summary>
+            Generate new access token and refresh token when they are expired for admin
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.VerifyAndGenerateTokenCustomer(Services.DTO.Request.TokenRequest)">
+            <summary>
+            Generate new access token and refresh token when they are expired for customer
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.VerifyAndGenerateTokenStaff(Services.DTO.Request.TokenRequest)">
+            <summary>
+            Generate new access token and refresh token when they are expired for Staff
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.RevokeTokenAdmin">
+            <summary>
+            Use for logout to revoke old Admin's token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.RevokeTokenCustomer(System.Int32)">
+            <summary>
+            Use for logout to revoke old Customer's token
+            </summary>
+            <param name="customerID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.RevokeTokenStaff(System.Int32)">
+            <summary>
+            Use for logout to revoke old Staff's token
+            </summary>
+            <param name="staffId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.TestAuthen">
+            <summary>
+            Test Authen customer
+            </summary>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.TestAuthenStaff">
+            <summary>
+            Test Authen Staff
+            </summary>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.AuthenticationController.TestAuthenStaffAndCustomer">
+            <summary>
+            Test Authen Staff And Customer
+            </summary>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.VerifyEmail(System.String)">
+            <summary>
+            Verify customer's email
+            </summary>
+            <param name="reuqest">Authentication  for customer</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.CreateCustomer(Services.DTO.Request.CreateCustomerRequest)">
+            <summary>
+            Sign Up Customer
+            </summary>
+            <param name="customer">The customer information for creating a new account.</param>
+            <returns>A response indicating the result of the account creation process.</returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.CreateCustomerWithGoogle(Services.DTO.Request.CreateGoogleAccountRequest)">
+            <summary>
+            Sign Up Customer with Google
+            </summary>
+            <param name="customer">The customer information for creating a new account.</param>
+            <returns>A response indicating the result of the account creation process.</returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.GetCustomers(Services.DTO.Request.PagingRequest,Services.DTO.Request.CustomerRequest)">
+            <summary>
+            Get list of customers
+            </summary>
+            <param name="pagingRequest"></param>
+            <param name="accountRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.GetCustomerByID(System.Int32)">
+            <summary>
+            Get Customer by id
+            </summary>
+            <param name="customer">The customer information for creating a new account.</param>
+            <returns>A response indicating the result of the account creation process.</returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.ChangePassword(Services.DTO.Request.ChangePasswordRequest,System.Int32)">
+            <summary>
+            Change customer's password
+            </summary>
+            <param name="request">The password information</param>
+            /// <param name="customerID">The customer's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.UpdateCustomer(Services.DTO.Request.CustomerUpdateRequest,System.Int32)">
+            <summary>
+            Update customer information
+            </summary>
+            <param name="request">The customer information for update.</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.ResetPass(System.String)">
+            <summary>
+            Reset customer's password
+            </summary>
+            <param name="email">The customer's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.ChangeMail(Services.DTO.Request.ChangeMailRequest)">
+            <summary>
+            Change customer's email
+            </summary>
+            <param name="request">The customer's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.CustomerController.DeActiveCustomer(System.Int32)">
+            <summary>
+            Ban a customer
+            </summary>
+            <param name="customerId">The customer's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.EventController.createEvent(Services.DTO.Request.CreateEventRequest)">
+            <summary>
+            Create an event
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.EventController.getEventById(System.Int32)">
+            <summary>
+            Get an event by event's id
+            </summary>
+            <param name="eventId">Event's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.EventController.getEvents(Services.DTO.Request.EventRequest,Services.DTO.Request.PagingRequest)">
+            <summary>Get list events</summary>
+            <param name="request">Filter</param>
+            <param name="paging">Paging</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.EventController.updateEvent(Services.DTO.Request.CreateEventRequest,System.Int32)">
+            <summary>Update an event</summary>
+            <param name="request">Event's information</param>
+            <param name="eventId">Event's Id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.EventController.deleteEvent(System.Int32)">
+            <summary>Delete an event</summary>
+            <param name="eventId">Event's Id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.createPack(Services.DTO.Request.CreatePackRequest)">
+            <summary>
+            Create an Pack
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.buyPack(Services.DTO.Request.BuyPackAndCreateTransactionRequest)">
+            <summary>
+            Buy pack
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.Extend(Services.DTO.Request.BuyPackAndCreateTransactionRequest)">
+            <summary>
+            Extend pack
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.getPackById(System.Int32)">
+            <summary>
+            Get an Pack by Pack's id
+            </summary>
+            <param name="PackId">Pack's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.getPackByCusId(System.Int32)">
+            <summary>
+            Get an Pack by customer's id
+            </summary>
+            <param name="customerId">Customer's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.getPacks(Services.DTO.Request.PackRequest,Services.DTO.Request.PagingRequest)">
+            <summary>Get list Packs</summary>
+            <param name="request">Filter</param>
+            <param name="paging">Paging</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.updatePack(Services.DTO.Request.CreatePackRequest,System.Int32)">
+            <summary>Update an Pack</summary>
+            <param name="request">Pack's information</param>
+            <param name="PackId">Pack's Id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.PackController.deletePack(System.Int32)">
+            <summary>Delete an Pack</summary>
+            <param name="PackId">Pack's Id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.AddCustomerIntoRoom(Services.DTO.Request.CreateCustomerInRoomRequest)">
+            <summary>
+            add Customer into room
+            </summary>
+            <param name="request">The infomation </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.CreateRoom(Services.DTO.Request.CreateRoomRequest)">
+            <summary>
+            Create room
+            </summary>
+            <param name="request">The room's infomation </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.GetRooms(Services.DTO.Request.PagingRequest,Services.DTO.Request.RoomRequest)">
+            <summary>
+            Get rooms
+            </summary>
+            <param name="request">The room's filter </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.GetCustomerInRoom(Services.DTO.Request.PagingRequest,Services.DTO.Request.CustomerInRoomRequest)">
+            <summary>
+            Get customer in room 
+            </summary>
+            <param name="request">The room's filter </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.GetRoomById(System.Int32)">
+            <summary>
+            Get room by id
+            </summary>
+            <param name="request">The room's id </param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.GetRoomById(Services.DTO.Request.CreateRoomRequest,System.Int32)">
+            <summary>
+            Update room
+            </summary>
+            <param name="request">The room's information</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.RoomController.ChangeRoom(Services.DTO.Request.ChangeRoomForCustomerRequest)">
+            <summary>
+            Change room for customer
+            </summary>
+            <param name="request">The room change's information</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.CreateStaff(Services.DTO.Request.CreateStaffRequest)">
+            <summary>
+            Create a new staff
+            </summary>
+            <param name="reuqest">The staff information</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.GetStaffs(Services.DTO.Request.PagingRequest,Services.DTO.Request.StaffRequest)">
+            <summary>
+            Get list of staff
+            </summary>
+            <param name="pagingRequest"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.GetStaffById(System.Int32)">
+            <summary>
+            Get a staff by staff's id
+            </summary>
+            <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.ChangePassword(Services.DTO.Request.ChangePasswordRequest,System.Int32)">
+            <summary>
+            Change staff's password
+            </summary>
+            <param name="request">The password information</param>
+            /// <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.UpdateStaff(Services.DTO.Request.StaffUpdateRequest,System.Int32)">
+            <summary>
+            Update staff's information
+            </summary>
+            <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.getStaffRoomId(System.Int32)">
+            <summary>
+            Update staff's information
+            </summary>
+            <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.BanStaff(System.Int32)">
+            <summary>
+            Ban a staff
+            </summary>
+            <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.UnbanStaff(System.Int32)">
+            <summary>
+            Unban a staff
+            </summary>
+            <param name="staffId">The staff's id</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.ResetPass(System.String)">
+            <summary>
+            Reset staff's password
+            </summary>
+            <param name="email">The staff's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.StaffController.ChangeMail(Services.DTO.Request.ChangeMailRequest)">
+            <summary>
+            Change staff's email
+            </summary>
+            <param name="request">The staff's email</param>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.TransactionController.GetTransactions(Services.DTO.Request.PagingRequest,Services.DTO.Request.TransactionRequest)">
+            <summary>
+            Get list of transaction
+            </summary>
+            <param name="pagingRequest"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kacy_Backend.Controllers.TransactionController.GetTransactionById(System.Int32)">
+            <summary>
+            Get a transaction by transaction's id
+            </summary>
+            <param name="tranID">The transaction's id</param>
+        </member>
+    </members>
+</doc>
